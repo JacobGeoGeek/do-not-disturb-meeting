@@ -1,6 +1,6 @@
-#include "ConfigurationsHTTPService.hpp"
+#include "ConfigurationsHttp.hpp"
 
-ConfigurationsHTTPService::ConfigurationsHTTPService()
+ConfigurationsHttp::ConfigurationsHttp()
 {
     this->configurations = make_shared<Settings>();
 
@@ -9,7 +9,7 @@ ConfigurationsHTTPService::ConfigurationsHTTPService()
     this->configurations->set_default_header("Access-Control-Allow-Origin", "*");
 };
 
-shared_ptr<Settings> ConfigurationsHTTPService::getConfigurations() const
+shared_ptr<Settings> ConfigurationsHttp::getConfigurations() const
 {
     return this->configurations;
 }
