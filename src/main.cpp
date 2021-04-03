@@ -10,9 +10,9 @@ int main(const int, const char **)
     auto meetingResource = make_shared<MeetingResource>();
     auto configurations = make_shared<ConfigurationsHttp>();
 
-    MeetingService meetingResource = MeetingService(meetingResource, configurations);
+    MeetingService meetingService  {meetingResource, configurations};
 
-    meetingResource.start();
+    meetingService.start();
 
     return EXIT_SUCCESS;
 }
